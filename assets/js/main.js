@@ -329,10 +329,8 @@ $(function () {
     /*  XX. Perso
     /*-------------------------------------------------------------------*/
     $('.js-picture-hover').on('mouseenter', function (event) {
-        console.log('hover');
         $('.js-template .js-picture-holder').css({ 'position': 'absolute', 'left': event.pageX, 'top': event.pageY }).show();
     }).on('mouseleave', function () {
-        console.log('hover out');
         $(".js-template .js-picture-holder").hide();
     });
 });
