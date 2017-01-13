@@ -110,6 +110,8 @@ showContent = function (content, command = false, flush = false) {
 **/
 flushContent = function () {
     $('.js-out').removeClass('js-out').addClass('js-in');
+    // Clear all waiting functions
+    q.clearQueue();
     // q.dequeue();
     inprogress = false;
 }

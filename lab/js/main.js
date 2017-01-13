@@ -2,7 +2,7 @@ var user;
 
 $(function () {
     // Initialise la langue en anglais
-    matriXv.setLang('en');
+    matriXv.setlang('en');
     // Initialise l'utilisateur (indiqué en GET ou 0 par défaut)
     setTimeout(
         loadUser

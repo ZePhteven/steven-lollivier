@@ -21,10 +21,10 @@ var matriXv = {
     /* main */cls: function () {
         matriXv.clear();
     },
-    /* main */setLang: function (lng) {
+    /* main */setlang: function (lng) {
         if ($.isArray(lng))
             lng = lng[0];
-        
+
         if (languages.indexOf(lng) >= 0) {
             $.getJSON('data/i18n/' + lng + '.json', function (data) {
                 i18n = data;
@@ -32,15 +32,14 @@ var matriXv = {
             }).fail(function () {
                 showContent(i18n.messages.noLanguage);
             });
-        }
-        if (typeof i18n !== 'undefined') 
+        } else if (typeof i18n !== 'undefined')
             showContent(i18n.messages.noLanguage);
-        
+
     },
     /* main */getuser: function (userId) {
         if ($.isArray(userId))
             userId = userId[0];
-        
+
         $.getJSON('data/users/' + userId + '.json', function (data) {
             user = data.user;
             showContent(i18n.messages.userLoaded);
