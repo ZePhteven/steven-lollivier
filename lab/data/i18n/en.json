@@ -56,6 +56,6 @@
 		"resume": "Displays full resume",
 		"skills": "Displays skills and level",
 		"stories": "Redirects to the list of my stories",
-		"switchi18n": "Switch language. Add 'en' or 'fr' : (ex: switchi18n fr)"
+		"setLang": "Switch language. Add 'en' or 'fr' : (ex: setLang fr)"
 	}
 }

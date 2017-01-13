@@ -56,6 +56,6 @@
 		"resume": "Affiche le CV",
 		"skills": "Affiche les compétences et leur niveau",
 		"stories": "Redirige vers la listes de mes nouvelles",
-		"switchi18n": "Change la langue. Ajoutez 'en' ou 'fr' (ex: switchi18n fr)"
+		"setLang": "Change la langue. Ajoutez 'en' ou 'fr' (ex: setLang fr)"
 	}
 }

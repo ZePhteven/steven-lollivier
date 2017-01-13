@@ -21,7 +21,7 @@ var matriXv = {
     /* main */cls: function () {
         matriXv.clear();
     },
-    /* main */switchi18n: function (lng) {
+    /* main */setLang: function (lng) {
         if ($.isArray(lng))
             lng = lng[0];
         
