@@ -2330,3 +2330,14 @@ footer.footer {
         footer.footer .copyright p {
             font-size: 14px;
         }
+
+    /*-------------------------------------------------------------------*/
+    /*  XX. Perso
+    /*-------------------------------------------------------------------*/
+    .js-picture-hover {
+        cursor: pointer;
+    }
+    
+    .js-picture-holder img{
+        height: 300px;
+    }

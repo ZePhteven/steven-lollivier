@@ -15,14 +15,12 @@ $(function () {
     /*-------------------------------------------------------------------*/
     /*  1. Preloader. Requires jQuery jpreloader plugin.
     /*-------------------------------------------------------------------*/
-    $(document).ready(function () {
-        if ($.fn.jpreLoader) {
-            $('body').jpreLoader({
-                showPercentage: false,
-                loaderVPos: '50%'
-            });
-        }
-    });
+    if ($.fn.jpreLoader) {
+        $('body').jpreLoader({
+            showPercentage: false,
+            loaderVPos: '50%'
+        });
+    }
 
     /*-------------------------------------------------------------------*/
     /*  2. Makes the height of all selected elements (".match-height")
@@ -63,8 +61,8 @@ $(function () {
             e.preventDefault();
 
             var anchor = $(this),
-            href = anchor.attr('href'),
-            offset = $('body').attr('data-offset');
+                href = anchor.attr('href'),
+                offset = $('body').attr('data-offset');
 
             $('html, body').stop().animate({
                 scrollTop: $(href).offset().top - (offset - 1)
@@ -86,7 +84,7 @@ $(function () {
     /*-------------------------------------------------------------------*/
     var stickyMenu = function () {
         var ww = Math.max($(window).width(), window.innerWidth),
-        nav = $('.navbar.navbar-fixed-top');
+            nav = $('.navbar.navbar-fixed-top');
 
         if ($.fn.unstick)
             nav.unstick();
@@ -107,7 +105,7 @@ $(function () {
     /*-------------------------------------------------------------------*/
     var toggleNavbarMethod = function () {
         var ww = Math.max($(window).width(), window.innerWidth),
-        dropdown = $('.navbar .dropdown');
+            dropdown = $('.navbar .dropdown');
 
         if (ww >= 992) {
             dropdown.on('mouseover', function () {
@@ -182,8 +180,8 @@ $(function () {
     /*-------------------------------------------------------------------*/
     var resumeCollapse = function () {
         var ww = Math.max($(window).width(), window.innerWidth),
-        workItem = $('.collapse:not(:first)', '#work'),
-        educationItem = $('.collapse:not(:first)', '#education');
+            workItem = $('.collapse:not(:first)', '#work'),
+            educationItem = $('.collapse:not(:first)', '#education');
 
         if (ww < 768) {
             workItem.collapse('show');
@@ -241,18 +239,17 @@ $(function () {
     var circleChart = function () {
         $('.circle-chart').find('.item-progress').each(function () {
             var item = $(this),
-            maxHeight = 108,
-            newHeight = maxHeight * ($(this).data('percent') / 100);
+                maxHeight = 108,
+                newHeight = maxHeight * ($(this).data('percent') / 100);
 
             // Only animate elements when using non-mobile devices    
             if (jQuery.browser.mobile === false) {
                 item.one('inview', function (isInView) {
-                    if (isInView) {
-                        // Animate item
+                    // Animate item
+                    if (isInView)
                         item.animate({
                             height: newHeight
                         }, 1500);
-                    }
                 });
             }
             else
@@ -271,8 +268,8 @@ $(function () {
     var barChart = function () {
         $('.bar-chart').find('.item-progress').each(function () {
             var item = $(this),
-            percent = $(this).prev(),
-            newWidth = $(this).parent().width() * ($(this).data('percent') / 100);
+                percent = $(this).prev(),
+                newWidth = $(this).parent().width() * ($(this).data('percent') / 100);
 
             // Only animate elements when using non-mobile devices    
             if (jQuery.browser.mobile === false) {
@@ -313,23 +310,29 @@ $(function () {
 
     var counter = function () {
         var number = $('.milestones').find('.number');
-
-        if ($.fn.countTo) {
-            number.countTo({
-                speed: 3000
-            });
-        }
+        if ($.fn.countTo)
+            number.countTo({ speed: 3000 });
     };
 
     if (jQuery.browser.mobile === false) {
         var number = $('.milestones .number');
 
         number.one('inview', function (isInView) {
-            if (isInView) {
+            if (isInView)
                 counter();
-            }
         });
     }
     else
         counter();
+
+    /*-------------------------------------------------------------------*/
+    /*  XX. Perso
+    /*-------------------------------------------------------------------*/
+    $('.js-picture-hover').on('mouseenter', function (event) {
+        console.log('hover');
+        $('.js-template .js-picture-holder').css({ 'position': 'absolute', 'left': event.pageX, 'top': event.pageY }).show();
+    }).on('mouseleave', function () {
+        console.log('hover out');
+        $(".js-template .js-picture-holder").hide();
+    });
 });
