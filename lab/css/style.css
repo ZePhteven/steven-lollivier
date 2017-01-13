@@ -1,0 +1,51 @@
+html {
+    background-color: #000;
+}
+
+body {
+    font-family: "Lucida Console";
+    font-size: 13px;
+    color: #0f0; 
+}
+
+.in {
+    display: block;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+}
+
+#in{
+    border-color: #fff;
+    border-width: 1px 0 0 0;
+    background-color: #000;
+    color: #0f0;
+    width: 100%;
+    padding: 8px;
+}
+
+#in:focus{
+    outline:none;
+}
+
+#out {
+    color: #0f0;
+    top: 0px;
+    bottom: 35px;
+    position: fixed;
+    overflow: auto;
+    width:100%;
+}
+
+a, a:hover, a:visited{
+    color: #0f0;
+}
+
+.js-out{
+    display: none;
+}
+
+.js-in{
+    display: inline;
+}

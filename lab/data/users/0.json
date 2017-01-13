@@ -1,0 +1,100 @@
+{
+    "user": {
+        "id": "0",
+		"identity": {
+            "gender": "0",
+			"lastname": "LOLLIVIER",
+			"firstname": "Steven",
+			"birthdate": "05/11/1989",
+			"nationality": "Français"
+        },
+		"address": {
+			"address-1": "41 Square Charles Dullin",
+			"address-2": "",
+			"zip": "35200",
+			"city": "Rennes"
+		},
+		"phone": "-",
+		"email": "steven.lollivier@gmail.com",
+		"job": "Software Designer & Developer",
+		"education": {
+			"education-0": {
+				"startdate": "09/2006",
+				"enddate": "06/2007",
+				"level" : "0",
+				"diploma": "Bac STI Génie Electronique",
+				"school": "Lycée Marcel Callo, Redon"
+			},
+			"education-1": {
+				"startdate": "09/2007",
+				"enddate": "06/2009",
+				"level" : "2",
+				"diploma": "DUT GEII",
+				"school": "IUT GEII RENNES 1, Rennes"
+			},
+			"education-2": {
+				"startdate": "10/2010",
+				"enddate": "12/2012",
+				"level" : "4",
+				"diploma": "Concepteur Développeur Informatique",
+				"school": "ENI Ecole Informatique, Vern Sur Seiche"
+			}
+		},
+		"experiences": {
+            "experience-0": {
+				"startdate": "04/2009",
+				"enddate": "06/2009",
+				"type" : "0",
+				"title" : "Développeur .NET",
+				"company": "DGA Maîtrise de l'information"
+			},
+			"experience-1": {
+				"startdate": "11/2009",
+				"enddate": "12/2009",
+				"type" : "1",
+				"title" : "Analyste Programmeur (interne)",
+				"company": "DRTEFP"
+			},
+			"experience-2": {
+				"startdate": "09/2010",
+				"enddate": "12/2012",
+				"type" : "1",
+				"title" : "Analyste Programmeur (Web)",
+				"company": "CYIM"
+			},
+			"experience-3": {
+				"startdate": "03/2013",
+				"enddate": "/",
+				"type" : "2",
+				"title" : "Ingénieur informatique",
+				"company": "6TM"
+			}
+        },
+		"languages": {
+            "French": "5",
+			"English": "3",
+			"Spanish": "1"
+        },
+		"skills": {
+            "C#": "4",
+			"VB.NET": "4",
+			"JavaScript": "4",
+			"PHP": "3",
+			"Java": "2"
+        },
+		"references": {
+            "reference-0": {
+				"title": "M Com' Musique",
+				"link": "http://www.mcommusique.com/"
+			}
+		},
+		"hobbies": {
+            "hobby-1": "Reading",
+			"hobby-2": "Jogging",
+			"hobby-3": "Meditation",
+			"hobby-4": "Science",
+			"hobby-5": "Astronomy",
+			"hobby-6": "Writing"
+        }
+    }
+}
