@@ -2,8 +2,8 @@ var matriXv = {
     author: "Steven LOLLIVIER",
     society: 'Lemon',
     product: 'Mocintash',
-    version: '1.0.1',
-    year: '2016',
+    version: '1.0.2',
+    year: '2017',
     /* main */help: function () {
         for (var section in functionList) {
             showContent('-- ' + section + ' --');
@@ -122,7 +122,9 @@ var matriXv = {
     },
     /* cv */picture: function () {
         $.get('data/users/pictures/' + user.id + '.data', function (data) {
-            showContent(data);
+            console.log('data/users/pictures - success');
+            showContent(data, false, true);
+            // showContent(data);
         }).fail(function () {
             showContent(i18n.messages.noPicture);
         });

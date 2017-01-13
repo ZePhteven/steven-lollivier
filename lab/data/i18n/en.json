@@ -33,7 +33,7 @@
 	"functions": {
 		"address": "Displays address",
 		"birthdate": "Displays birthdate",
-		"clear": "Clear output panel",
+		"clear": "Clear output panel (you can also use 'cls')",
 		"cls": "Clear output panel",
 		"education": "Displays education",
 		"email": "Displays email",

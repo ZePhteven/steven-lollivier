@@ -3,6 +3,7 @@ var i18n;
 var languages = new Array('en', 'fr');
 var i = 0;
 var commands = new Array();
+var queueTime = 25;
 
 $(function () {
     // Evite la mise en cache
@@ -26,13 +27,13 @@ formatContent = function (content) {
     //return '<p>' + content + '</p>';
     var output = '';
     var isSpecialChar = false;
-    for(var i = 0; i < content.length; i++) {
+    for (var i = 0; i < content.length; i++) {
         if (content[i] === '&' || isSpecialChar) {
-            if (content[i] === '&'){
+            if (content[i] === '&') {
                 output += '<span class="js-out">' + content[i];
                 isSpecialChar = true;
             }
-            else if (content[i] === ';'){
+            else if (content[i] === ';') {
                 output += content[i] + '</span>';
                 isSpecialChar = false;
             }
@@ -46,14 +47,12 @@ formatContent = function (content) {
 }
 
 var inprogress = false;
-checkQueue = function(){
-    if (!inprogress){
+checkQueue = function () {
+    if (!inprogress) {
         inprogress = true;
         q.dequeue();
     }
-    setTimeout(
-        checkQueue
-    , 50);
+    setTimeout(checkQueue, queueTime);
 }
 
 /**
@@ -64,36 +63,55 @@ animateOutput = function (item, i, length) {
         $(item).removeClass('js-out').addClass('js-in');
         if (i === length - 1)
             inprogress = false;
-    }, (50 * i));
+    }, (queueTime * i));
 }
 
 /**
 *   Affiche le contenu
 **/
 var q = $({});
-showContent = function (content) {
-    q.queue(function (){
+showContent = function (content, command = false, flush = false) {
+    q.queue(function () {
         var uniqueId = '';
-        if (typeof arguments[1] !== 'undefined')
+        if (!command)
             uniqueId = Math.floor((Math.random() * 100000) + 1);
-        
-        //$('#out').append(formatContent(content)).hide;
-        var item = $('<p/>', {
-            'id': uniqueId,
-            //'class': className,
-            html: formatContent(content)
-        }).appendTo('#out');
-        //$('#out').writeText(formatContent(content));
 
-        $('.js-out', item).each(function(i) {
-            animateOutput(this, i, $('.js-out', item).length);
-        });
+        if (flush) {
+            var item = $('<p/>', {
+                'id': uniqueId,
+                //'class': className,
+                html: content
+            }).appendTo('#out');
+            // On indique bien à la queue qu'elle n'a rien a faire
+            inprogress = false;
+        } else {
+            //$('#out').append(formatContent(content)).hide;
+            var item = $('<p/>', {
+                'id': uniqueId,
+                //'class': className,
+                html: formatContent(content)
+            }).appendTo('#out');
+            //$('#out').writeText(formatContent(content));
+
+            $('.js-out', item).each(function (i) {
+                animateOutput(this, i, $('.js-out', item).length);
+            });
+        }
 
         $('#out').animate({ scrollTop: $('#out')[0].scrollHeight }, 750);
         //$('#out').scrollTop($('#out')[0].scrollHeight);
 
         $('#in').focus();
     });
+}
+
+/**
+*   Supprime le texte saisi par l'utilisateur
+**/
+flushContent = function () {
+    $('.js-out').removeClass('js-out').addClass('js-in');
+    // q.dequeue();
+    inprogress = false;
 }
 
 /**
@@ -123,12 +141,12 @@ checkFunction = function (functionName) {
 displayInput = function () {
     var input = $('#in').val();
     commands.push(input);
-    showContent('> ' + input, 'command');
+    showContent('> ' + input, true);
     var functionName = input.split(' ')[0];
     var functionArgs = input.split(' ').splice(1);
     if (checkFunction(functionName))
         executeFunctionByName(functionName, matriXv, functionArgs);
-    
+
     clearInput();
 }
 
@@ -149,7 +167,7 @@ executeFunctionByName = function (functionName, context /*, args */) {
 /**
 *   Parse l'objet (JSON) récursivement
 **/
-iterate = function(obj, items) {
+iterate = function (obj, items) {
     var level = (arguments[2]) ? arguments[2] : 0;
     for (var key in obj) {
         var elem = obj[key];
@@ -198,7 +216,7 @@ getFunctionList = function (namespace, array) {
 
             if (typeof array[section] === 'undefined')
                 array[section] = new Array();
-            
+
             array[section].push(func);
         }
 
@@ -231,12 +249,12 @@ getItems = function (items, message) {
 *   Extension Jquery --> C# String.Format
 **/
 String.prototype.format = String.prototype.f = function () {
-  var args = arguments;
-  return this.replace(/\{\{|\}\}|\{(\d+)\}/g, function (m, n) {
-    if (m == "{{") { return "{"; }
-    if (m == "}}") { return "}"; }
-    return args[n];
-  });
+    var args = arguments;
+    return this.replace(/\{\{|\}\}|\{(\d+)\}/g, function (m, n) {
+        if (m == "{{") { return "{"; }
+        if (m == "}}") { return "}"; }
+        return args[n];
+    });
 };
 
 /**
