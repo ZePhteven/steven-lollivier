@@ -93,7 +93,8 @@ showContent = function (content, command = false, flush = false) {
             });
         }
 
-        $('#out').animate({ scrollTop: $('#out')[0].scrollHeight }, 750);
+        // $('#out').animate({ scrollTop: $('#out')[0].scrollHeight }, 750);
+        $("html, body").animate({ scrollTop: $(document).height() }, 1000);
         //$('#out').scrollTop($('#out')[0].scrollHeight);
 
         $('#in').focus();

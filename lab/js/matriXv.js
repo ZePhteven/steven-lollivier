@@ -2,7 +2,7 @@ var MatriXv = {
     author: "Steven LOLLIVIER",
     society: 'Lemon',
     product: 'Mocintash',
-    version: '1.0.2',
+    version: '1.0.3',
     year: '2017',
     /* main */help: function () {
         for (var section in functionList) {
@@ -34,12 +34,11 @@ var MatriXv = {
             });
         } else if (typeof i18n !== 'undefined')
             showContent(i18n.messages.noLanguage);
-
     },
     /* main */getuser: function (userId) {
         if ($.isArray(userId))
             userId = userId[0];
-
+        showContent('> ' + i18n.messages.loadingUser);
         $.getJSON('data/users/' + userId + '.json', function (data) {
             user = data.user;
             showContent(i18n.messages.userLoaded);

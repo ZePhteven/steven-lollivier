@@ -8,20 +8,15 @@ body {
     color: #0f0; 
 }
 
-.in {
-    display: block;
-    position: fixed;
-    left: 0;
-    bottom: 0;
-    width: 100%;
+.in::before {
+    content: '> ';
 }
 
 #in{
-    border-color: #fff;
-    border-width: 1px 0 0 0;
+    border-width: 0;
     background-color: #000;
     color: #0f0;
-    width: 100%;
+    width: 90%;
     padding: 8px;
 }
 
@@ -33,7 +28,6 @@ body {
     color: #0f0;
     top: 0px;
     bottom: 35px;
-    position: fixed;
     overflow: auto;
     width:100%;
 }

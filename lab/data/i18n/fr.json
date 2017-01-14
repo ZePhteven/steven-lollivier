@@ -1,5 +1,5 @@
 {
-    "keywords": {
+	"keywords": {
 		"identity": "identité",
 		"job": "travail",
 		"education": "formation",
@@ -11,6 +11,7 @@
 	"messages": {
 		"dataReloaded": "Rechargement terminé",
 		"help": "Saississez 'help' pour plus d'informations",
+		"loadingUser": "Chargement de l'utilisateur",
 		"noLanguage": "Cette langue n'est pas disponible",
 		"noLanguages": "Aucune langue n'a été indiquée",
 		"noPicture": "Il n'y a pas d'image disponible",
