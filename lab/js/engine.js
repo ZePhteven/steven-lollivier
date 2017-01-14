@@ -5,11 +5,6 @@ var i = 0;
 var commands = new Array();
 var queueTime = 25;
 
-$(function () {
-    // Evite la mise en cache
-    $.ajaxSetup({ cache: false });
-});
-
 /**
 *   Récupération des paramètres passés en GET
 **/
@@ -147,7 +142,7 @@ displayInput = function () {
     var functionName = input.split(' ')[0];
     var functionArgs = input.split(' ').splice(1);
     if (checkFunction(functionName))
-        executeFunctionByName(functionName, matriXv, functionArgs);
+        executeFunctionByName(functionName, MatriXv, functionArgs);
 
     clearInput();
 }
@@ -203,7 +198,7 @@ setSpacer = function (level) {
 }
 
 /**
-*   Liste les fonctions disponibles dans le namespace "matriXv"
+*   Liste les fonctions disponibles dans le namespace "MatriXv"
 **/
 getFunctionList = function (namespace, array) {
     $.get('js/' + namespace + '.js', function (data) {
@@ -278,5 +273,4 @@ String.prototype.format = String.prototype.f = function () {
 //            }
 //        }, 100);
 //    };
-
 //})(jQuery);

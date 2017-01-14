@@ -1,16 +1,17 @@
 var user;
 
 $(function () {
-    // Initialise la langue en anglais
-    matriXv.setlang('en');
-    // Initialise l'utilisateur (indiqué en GET ou 0 par défaut)
-    setTimeout(
-        loadUser
-        , 2000);
-    // Initialise la liste des fonctions disponibles dans le namespace indiqué
-    getFunctionList('matriXv', functionList);
+    // Evite la mise en cache
+    $.ajaxSetup({ cache: false });
 
-    $('#in').focus();
+    // Initialise la langue en anglais
+    MatriXv.setlang('en');
+
+    // Initialise l'utilisateur (indiqué en GET ou 0 par défaut)
+    setTimeout(loadUser, 2000);
+
+    // Initialise la liste des fonctions disponibles dans le namespace indiqué
+    getFunctionList('MatriXv', functionList);
 
     $('#in').keydown(function (e) {
         if (e.ctrlKey) {
@@ -44,11 +45,10 @@ $(function () {
                     break;
             }
         }
-    });
+    }).focus();
 
-    setTimeout(
-        checkQueue
-        , 75);
+    // Lance la méthode de check
+    setTimeout(checkQueue, 75);
 });
 
 /**
@@ -59,5 +59,5 @@ loadUser = function () {
     if (getParameterByName('userId') !== '')
         userId = getParameterByName('userId');
 
-    matriXv.getuser(userId);
+    MatriXv.getuser(userId);
 }

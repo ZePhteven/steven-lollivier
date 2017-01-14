@@ -1,4 +1,4 @@
-var matriXv = {
+var MatriXv = {
     author: "Steven LOLLIVIER",
     society: 'Lemon',
     product: 'Mocintash',
@@ -15,11 +15,11 @@ var matriXv = {
     },
     /* main */clear: function () {
         $('#out').empty();
-        showContent(i18n.messages.welcome.format(matriXv.product, matriXv.version, matriXv.society, matriXv.year));
+        showContent(i18n.messages.welcome.format(MatriXv.product, MatriXv.version, MatriXv.society, MatriXv.year));
         showContent('> ' + i18n.messages.help);
     },
     /* main */cls: function () {
-        matriXv.clear();
+        MatriXv.clear();
     },
     /* main */setlang: function (lng) {
         if ($.isArray(lng))
@@ -28,7 +28,7 @@ var matriXv = {
         if (languages.indexOf(lng) >= 0) {
             $.getJSON('data/i18n/' + lng + '.json', function (data) {
                 i18n = data;
-                matriXv.clear();
+                MatriXv.clear();
             }).fail(function () {
                 showContent(i18n.messages.noLanguage);
             });
@@ -63,9 +63,9 @@ var matriXv = {
         });
     },
     /* cv */identity: function () {
-        matriXv.name();
-        matriXv.birthdate();
-        matriXv.nationality();
+        MatriXv.name();
+        MatriXv.birthdate();
+        MatriXv.nationality();
     },
     /* cv */name: function () {
         var content = "";
@@ -147,18 +147,18 @@ var matriXv = {
     },
     /* cv */resume: function () {
         showContent('-- ' + i18n.keywords.identity + ' --');
-        matriXv.identity();
-        matriXv.email();
+        MatriXv.identity();
+        MatriXv.email();
         showContent('-- ' + i18n.keywords.job + ' --');
-        matriXv.job();
+        MatriXv.job();
         showContent('-- ' + i18n.keywords.education + ' --');
-        matriXv.education();
+        MatriXv.education();
         showContent('-- ' + i18n.keywords.experiences + ' --');
-        matriXv.experiences();
+        MatriXv.experiences();
         showContent('-- ' + i18n.keywords.skills + ' --');
-        matriXv.skills();
+        MatriXv.skills();
         showContent('-- ' + i18n.keywords.languages + ' --');
-        matriXv.languages();
+        MatriXv.languages();
     },
     /* other */stories: function () {
         showContent(i18n.messages.stories);
