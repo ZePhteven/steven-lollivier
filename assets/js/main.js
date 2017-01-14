@@ -333,4 +333,7 @@ $(function () {
     }).on('mouseleave', function () {
         $(".js-template .js-picture-holder").hide();
     });
+
+    // Templates must be hidden
+    $('.js-template > *').hide();
 });
