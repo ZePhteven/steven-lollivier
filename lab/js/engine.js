@@ -5,6 +5,9 @@ var i = 0;
 var commands = new Array();
 var queueTime = 25;
 
+var startSpecial = new Array('&', '<');
+var endSpecial = new Array(';', '>');
+
 /**
 *   Récupération des paramètres passés en GET
 **/
@@ -23,12 +26,12 @@ formatContent = function (content) {
     var output = '';
     var isSpecialChar = false;
     for (var i = 0; i < content.length; i++) {
-        if (content[i] === '&' || isSpecialChar) {
-            if (content[i] === '&') {
+        if ($.inArray(content[i], startSpecial) > 0 || isSpecialChar) {
+            if ($.inArray(content[i], startSpecial) > 0) {
                 output += '<span class="js-out">' + content[i];
                 isSpecialChar = true;
             }
-            else if (content[i] === ';') {
+            else if ($.inArray(content[i], endSpecial) > 0) {
                 output += content[i] + '</span>';
                 isSpecialChar = false;
             }

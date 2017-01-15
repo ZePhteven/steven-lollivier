@@ -41,7 +41,7 @@ var MatriXv = {
         showContent('> ' + i18n.messages.loadingUser);
         $.getJSON('data/users/' + userId + '.json', function (data) {
             user = data.user;
-            showContent(i18n.messages.userLoaded);
+            showContent(i18n.messages.userLoaded);// + ' : ' + data.user.identity.lastname + ' ' + data.user.identity.firstname);
             //matriXv.parse();
         }).fail(function () {
             showContent(i18n.messages.noUser);
@@ -133,7 +133,7 @@ var MatriXv = {
     /* cv */references: function () {
         for (var key in user.references) {
             var ref = user.references[key];
-            showContent(ref.title + ' (<a href="' + ref.link + '">' + ref.link + '</a>)');
+            showContent(ref.title + ' (<a href="' + ref.link + '" target="_blank">' + ref.link + '</a>)');
         }
     },
     /* cv */languages: function () {

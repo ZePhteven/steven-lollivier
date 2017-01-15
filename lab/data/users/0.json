@@ -77,15 +77,27 @@
         },
 		"skills": {
             "C#": "4",
-			"VB.NET": "4",
+			"SQL": "4",
 			"JavaScript": "4",
 			"PHP": "3",
 			"Java": "2"
         },
 		"references": {
-            "reference-0": {
-				"title": "M Com' Musique",
-				"link": "http://www.mcommusique.com/"
+			"reference-0": {
+				"title": "Europcar Atlantique",
+				"link": "http://www.europcar-atlantique.fr/"
+			},
+			"reference-1": {
+				"title": "Loceco",
+				"link": "http://www.loceco.com/"
+			},
+			"reference-2": {
+				"title": "Véhicule Idéal",
+				"link": "http://www.vehicule-ideal.com/"
+			},
+			"reference-3": {
+				"title": "Zenius",
+				"link": "http://www.zenius.fr/"
 			}
 		},
 		"hobbies": {

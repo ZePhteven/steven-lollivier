@@ -11,7 +11,7 @@
 	"messages": {
 		"dataReloaded": "Rechargement terminé",
 		"help": "Saississez 'help' pour plus d'informations",
-		"loadingUser": "Chargement de l'utilisateur",
+		"loadingUser": "Chargement de l'utilisateur en cours ...",
 		"noLanguage": "Cette langue n'est pas disponible",
 		"noLanguages": "Aucune langue n'a été indiquée",
 		"noPicture": "Il n'y a pas d'image disponible",
@@ -55,8 +55,8 @@
 		"references": "Affiche les références",
 		"reload": "Recharge l'utilisateur",
 		"resume": "Affiche le CV",
+		"settang": "Change la langue. Ajoutez 'en' ou 'fr' (ex: setLang fr)",
 		"skills": "Affiche les compétences et leur niveau",
-		"stories": "Redirige vers la listes de mes nouvelles",
-		"setLang": "Change la langue. Ajoutez 'en' ou 'fr' (ex: setLang fr)"
+		"stories": "Redirige vers la listes de mes nouvelles"
 	}
 }

@@ -17,7 +17,7 @@ body {
     background-color: #000;
     color: #0f0;
     width: 90%;
-    padding: 8px;
+    padding: 0;
 }
 
 #in:focus{
