@@ -11,7 +11,7 @@ $(function () {
     setTimeout(loadUser, 2000);
 
     // Initialise la liste des fonctions disponibles dans le namespace indiqué
-    getFunctionList('MatriXv', functionList);
+    getFunctionList('matriXv', functionList);
 
     $('#in').keydown(function (e) {
         if (e.ctrlKey) {
