@@ -47,6 +47,13 @@ $(function () {
         }
     }).focus();
 
+    // Focus on input
+    $(document).on('click', function (e) {
+        if($(e.target).is('#out, .in') || $('#out, .in').has(e.target).length)
+            return;//e.stopPropagation();
+        $('#in').focus();
+    });
+
     // Lance la méthode de check
     setTimeout(checkQueue, 75);
 });
