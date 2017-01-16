@@ -26,12 +26,12 @@ formatContent = function (content) {
     var output = '';
     var isSpecialChar = false;
     for (var i = 0; i < content.length; i++) {
-        if ($.inArray(content[i], startSpecial) > 0 || isSpecialChar) {
-            if ($.inArray(content[i], startSpecial) > 0) {
+        if ($.inArray(content[i], startSpecial) >= 0 || isSpecialChar) {
+            if ($.inArray(content[i], startSpecial) >= 0) {
                 output += '<span class="js-out">' + content[i];
                 isSpecialChar = true;
             }
-            else if ($.inArray(content[i], endSpecial) > 0) {
+            else if ($.inArray(content[i], endSpecial) >= 0) {
                 output += content[i] + '</span>';
                 isSpecialChar = false;
             }
