@@ -69,6 +69,9 @@ animateOutput = function (item, i, length) {
 **/
 var q = $({});
 showContent = function (content, command = false, flush = false) {
+    if (content === '')
+        return;
+
     q.queue(function () {
         var uniqueId = '';
         if (!command)
