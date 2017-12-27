@@ -34,7 +34,7 @@
 	"functions": {
 		"address": "Affiche l'adresse",
 		"birthdate": "Affiche la date de naissance",
-		"clear": "Efface tous les messages (vous pouvez aussi utiliser cls",
+		"clear": "Efface tous les messages (vous pouvez aussi utiliser cls)",
 		"cls": "Efface tous les messages",
 		"education": "Affiche les études",
 		"email": "Affiche l'email",

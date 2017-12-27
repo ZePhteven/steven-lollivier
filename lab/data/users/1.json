@@ -8,25 +8,25 @@
         },
 		"job": "Hacker",
 		"experiences": {
-            "experience-0": {
+            "0": {
 				"startdate": "01/01/2008",
 				"enddate": "01/01/2010",
 				"company": "Google"
 			},
-			"experience-1": {
+			"1": {
 				"startdate": "01/01/2010",
 				"enddate": "01/01/2012",
 				"company": "NASA"
 			},
-			"experience-2": {
+			"2": {
 				"startdate": "01/01/2012",
 				"enddate": "01/01/2014",
 				"company": "SpaceX"
 			}
         },
 		"hobbies": {
-            "hobby-1": "Reading",
-			"hobby-3": "Meditation"
+            "0": "Reading",
+			"1": "Meditation"
         }
     }
 }

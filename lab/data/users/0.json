@@ -18,21 +18,21 @@
 		"email": "steven.lollivier@gmail.com",
 		"job": "Software Designer & Developer",
 		"education": {
-			"education-0": {
+			"0": {
 				"startdate": "09/2006",
 				"enddate": "06/2007",
 				"level" : "0",
 				"diploma": "Bac STI Génie Electronique",
 				"school": "Lycée Marcel Callo, Redon"
 			},
-			"education-1": {
+			"1": {
 				"startdate": "09/2007",
 				"enddate": "06/2009",
 				"level" : "2",
 				"diploma": "DUT GEII",
 				"school": "IUT GEII RENNES 1, Rennes"
 			},
-			"education-2": {
+			"2": {
 				"startdate": "10/2010",
 				"enddate": "12/2012",
 				"level" : "4",
@@ -41,28 +41,28 @@
 			}
 		},
 		"experiences": {
-            "experience-0": {
+            "0": {
 				"startdate": "04/2009",
 				"enddate": "06/2009",
 				"type" : "0",
 				"title" : "Développeur .NET",
 				"company": "DGA Maîtrise de l'information"
 			},
-			"experience-1": {
+			"1": {
 				"startdate": "11/2009",
 				"enddate": "12/2009",
 				"type" : "1",
 				"title" : "Analyste Programmeur (interne)",
 				"company": "DRTEFP"
 			},
-			"experience-2": {
+			"2": {
 				"startdate": "09/2010",
 				"enddate": "12/2012",
 				"type" : "1",
 				"title" : "Analyste Programmeur (Web)",
 				"company": "CYIM"
 			},
-			"experience-3": {
+			"3": {
 				"startdate": "03/2013",
 				"enddate": "/",
 				"type" : "2",
@@ -83,30 +83,30 @@
 			"Java": "2"
         },
 		"references": {
-			"reference-0": {
+			"0": {
 				"title": "Europcar Atlantique",
 				"link": "http://www.europcar-atlantique.fr/"
 			},
-			"reference-1": {
+			"1": {
 				"title": "Loceco",
 				"link": "http://www.loceco.com/"
 			},
-			"reference-2": {
+			"2": {
 				"title": "Véhicule Idéal",
 				"link": "http://www.vehicule-ideal.com/"
 			},
-			"reference-3": {
+			"3": {
 				"title": "Zenius",
 				"link": "http://www.zenius.fr/"
 			}
 		},
 		"hobbies": {
-            "hobby-1": "Reading",
-			"hobby-2": "Jogging",
-			"hobby-3": "Meditation",
-			"hobby-4": "Science",
-			"hobby-5": "Astronomy",
-			"hobby-6": "Writing"
+            "0": "Reading",
+			"1": "Swimming",
+			"2": "Meditation",
+			"3": "Science",
+			"4": "Astronomy",
+			"5": "Writing"
         }
     }
 }
