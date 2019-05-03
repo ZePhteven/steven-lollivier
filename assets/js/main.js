@@ -2,8 +2,8 @@ defineMilestones = function () {
     var startWorkDay = new Date(2012, 1, 1);
     // 11 month * 20 days * 8 hours : 1760 h/year on 8640 h/year
     var hours = Math.floor((new Date() - startWorkDay) / (1000 * 60 * 60 * 24)) / (1760 / 8640);
-    var coffees = hours / 2;
-    var lines = hours * 2;
+    var coffees = hours / 4;
+    var lines = hours * 11.3;
 
     $('.js-coffees').data('to', coffees);
     $('.js-hours').data('to', hours);
