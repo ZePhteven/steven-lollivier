@@ -336,4 +336,7 @@ $(function () {
 
     // Templates must be hidden
     $('.js-template > *').hide();
+
+    // Age, precisely
+    $('.js-age').html(new Date(new Date() - new Date(1989, 11, 5)).getFullYear() - 1970);
 });
