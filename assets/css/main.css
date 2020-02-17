@@ -2336,6 +2336,7 @@ footer.footer {
     /*-------------------------------------------------------------------*/
     .js-picture-hover {
         cursor: pointer;
+        text-decoration: dotted white underline;
     }
     
     .js-picture-holder img{
