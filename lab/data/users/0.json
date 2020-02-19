@@ -64,6 +64,13 @@
 			},
 			"3": {
 				"startdate": "03/2013",
+				"enddate": "09/2019",
+				"type" : "2",
+				"title" : "Ingénieur informatique",
+				"company": "6TM"
+			},
+			"4": {
+				"startdate": "09/2019",
 				"enddate": "/",
 				"type" : "2",
 				"title" : "Ingénieur informatique",
@@ -78,7 +85,7 @@
 		"skills": {
             "C#": "4",
 			"SQL": "4",
-			"JavaScript": "4",
+			"JS /TypeScript": "4",
 			"PHP": "3",
 			"Java": "2"
         },
