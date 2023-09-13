@@ -1,0 +1,34 @@
+name: deploy
+
+on:
+  push:
+    branches: [ "master" ]
+
+jobs:
+  web-deploy:
+    name: 🎉 Deploy
+    runs-on: ubuntu-latest
+#    strategy:
+#      matrix:
+#        node-versions: [ '18' ]
+    steps:
+    - name: 🚚 Get latest code
+      uses: actions/checkout@v3
+
+#    - name: Use Node.js ${{ matrix.node-versions }}
+#      uses: actions/setup-node@v3
+#      with:
+#        node-version: ${{ matrix.node-versions }}
+
+#    - name: Build
+#      run: |
+#        npm ci
+#        npm run prod
+    
+    - name: 📂 Sync files
+      uses: SamKirkland/FTP-Deploy-Action@4.3.0
+      with:
+        server: ${{ secrets.FTP_HOST }}
+        username: ${{ secrets.FTP_USER }}
+        password: ${{ secrets.FTP_PASS }}
+        server-dir: ./www/wp-content/themes/jdd4/
