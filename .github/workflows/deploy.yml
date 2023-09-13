@@ -31,4 +31,4 @@ jobs:
         server: ${{ secrets.FTP_HOST }}
         username: ${{ secrets.FTP_USER }}
         password: ${{ secrets.FTP_PASS }}
-        server-dir: ./www/wp-content/themes/jdd4/
+        server-dir: ./www/1/
