@@ -2334,11 +2334,6 @@ footer.footer {
     /*-------------------------------------------------------------------*/
     /*  XX. Perso
     /*-------------------------------------------------------------------*/
-    .js-picture-hover {
-        cursor: pointer;
-        text-decoration: dotted white underline;
-    }
-    
     .js-picture-holder img{
         height: 300px;
     }

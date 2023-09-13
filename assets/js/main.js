@@ -328,14 +328,6 @@ $(function () {
     /*-------------------------------------------------------------------*/
     /*  XX. Perso
     /*-------------------------------------------------------------------*/
-    $('.js-picture-hover').on('mouseenter', function (event) {
-        $('.js-template .js-picture-holder').css({ 'position': 'absolute', 'left': event.pageX, 'top': event.pageY }).show();
-    }).on('mouseleave', function () {
-        $(".js-template .js-picture-holder").hide();
-    });
-
-    // Templates must be hidden
-    $('.js-template > *').hide();
 
     // Age, precisely
     $('.js-age').html(new Date(new Date() - new Date(1989, 11, 5)).getFullYear() - 1970);
