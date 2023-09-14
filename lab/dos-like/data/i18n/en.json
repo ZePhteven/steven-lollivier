@@ -1,0 +1,62 @@
+{
+	"keywords": {
+		"identity": "identity",
+		"job": "job",
+		"education": "education",
+		"experiences": "experiences",
+		"skills": "skills",
+		"languages": "languages",
+		"stories": "stories"
+	},
+	"messages": {
+		"dataReloaded": "Reloading completed",
+		"help": "Type 'help' for more informations",
+		"loadingUser": "Loading user ...",
+		"noLanguage": "This language is not available",
+		"noLanguages": "No language has been specified",
+		"noPicture": "There is no picture available",
+		"noSkills": "No skill has been specified",
+		"noUser": "Unknown user",
+		"userLoaded": "User loaded",
+		"stories": "Redirection to stories",
+		"welcome": "Welcome to {0} {1} by {2} - {3}"
+	},
+	"genders": {
+		"0": "Mr",
+		"1": "Miss",
+		"2": "Mrs"
+	},
+	"jobType": {
+		"0": "Stage",
+		"1": "CDD",
+		"2": "CDI"
+	},
+	"functions": {
+		"address": "Displays address",
+		"birthdate": "Displays birthdate",
+		"clear": "Clear output panel (you can also use 'cls')",
+		"cls": "Clear output panel",
+		"education": "Displays education",
+		"email": "Displays email",
+		"experiences": "Displays experiences",
+		"firstname": "Displays firstname",
+		"getuser": "Retrieves the user with the identifier (ex: getUser 1)",
+		"help": "Displays all functions",
+		"hobbies": "Displays hobbies",
+		"identity": "Displays identity",
+		"job": "Displays job",
+		"languages": "Displays languages",
+		"lastname": "Displays name",
+		"name": "Displays full name",
+		"nationality": "Displays nationality",
+		"parse": "Parse User object",
+		"phone": "Displays phone number",
+		"picture": "Displays picture",
+		"references": "Displays references",
+		"reload": "Reload User object",
+		"resume": "Displays full resume",
+		"setlang": "Switch language. Add 'en' or 'fr' : (ex: setLang fr)",
+		"skills": "Displays skills and level",
+		"stories": "Redirects to the list of my stories"
+	}
+}

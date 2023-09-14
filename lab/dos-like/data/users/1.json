@@ -1,0 +1,32 @@
+{
+    "user": {
+        "id": "1",
+		"identity": {
+            "gender": "0",
+			"lastname": "Doe",
+			"firstname": "John"
+        },
+		"job": "Hacker",
+		"experiences": {
+            "0": {
+				"startdate": "01/01/2008",
+				"enddate": "01/01/2010",
+				"company": "Google"
+			},
+			"1": {
+				"startdate": "01/01/2010",
+				"enddate": "01/01/2012",
+				"company": "NASA"
+			},
+			"2": {
+				"startdate": "01/01/2012",
+				"enddate": "01/01/2014",
+				"company": "SpaceX"
+			}
+        },
+		"hobbies": {
+            "0": "Reading",
+			"1": "Meditation"
+        }
+    }
+}
