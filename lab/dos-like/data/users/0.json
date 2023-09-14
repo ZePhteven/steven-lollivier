@@ -1,0 +1,119 @@
+{
+    "user": {
+        "id": "0",
+		"identity": {
+            "gender": "0",
+			"lastname": "LOLLIVIER",
+			"firstname": "Steven",
+			"birthdate": "05/11/1989",
+			"nationality": "Français"
+        },
+		"address": {
+			"address-1": "17 Boulevard Emile Combes",
+			"address-2": "",
+			"zip": "35000",
+			"city": "Rennes"
+		},
+		"phone": "-",
+		"email": "steven.lollivier@gmail.com",
+		"job": "Software Designer & Developer",
+		"education": {
+			"0": {
+				"startdate": "09/2006",
+				"enddate": "06/2007",
+				"level" : "0",
+				"diploma": "Bac STI Génie Electronique",
+				"school": "Lycée Marcel Callo, Redon"
+			},
+			"1": {
+				"startdate": "09/2007",
+				"enddate": "06/2009",
+				"level" : "2",
+				"diploma": "DUT GEII",
+				"school": "IUT GEII RENNES 1, Rennes"
+			},
+			"2": {
+				"startdate": "10/2010",
+				"enddate": "12/2012",
+				"level" : "4",
+				"diploma": "Concepteur Développeur Informatique",
+				"school": "ENI Ecole Informatique, Vern Sur Seiche"
+			}
+		},
+		"experiences": {
+            "0": {
+				"startdate": "04/2009",
+				"enddate": "06/2009",
+				"type" : "0",
+				"title" : "Développeur .NET",
+				"company": "DGA Maîtrise de l'information"
+			},
+			"1": {
+				"startdate": "11/2009",
+				"enddate": "12/2009",
+				"type" : "1",
+				"title" : "Analyste Programmeur (interne)",
+				"company": "DRTEFP"
+			},
+			"2": {
+				"startdate": "09/2010",
+				"enddate": "12/2012",
+				"type" : "1",
+				"title" : "Analyste Programmeur (Web)",
+				"company": "CYIM"
+			},
+			"3": {
+				"startdate": "03/2013",
+				"enddate": "09/2019",
+				"type" : "2",
+				"title" : "Ingénieur informatique",
+				"company": "6TM"
+			},
+			"4": {
+				"startdate": "09/2019",
+				"enddate": "/",
+				"type" : "2",
+				"title" : "Ingénieur informatique",
+				"company": "6TM"
+			}
+        },
+		"languages": {
+            "French": "5",
+			"English": "3",
+			"Spanish": "1"
+        },
+		"skills": {
+            "C#": "4",
+			"SQL": "4",
+			"JS /TypeScript": "4",
+			"PHP": "3",
+			"Java": "2"
+        },
+		"references": {
+			"0": {
+				"title": "Europcar Atlantique",
+				"link": "http://www.europcar-atlantique.fr/"
+			},
+			"1": {
+				"title": "Loceco",
+				"link": "http://www.loceco.com/"
+			},
+			"2": {
+				"title": "Véhicule Idéal",
+				"link": "http://www.vehicule-ideal.com/"
+			},
+			"3": {
+				"title": "Zenius",
+				"link": "http://www.zenius.fr/"
+			}
+		},
+		"hobbies": {
+            "0": "Reading",
+			"1": "Swimming",
+			"2": "Meditation",
+			"3": "Science",
+			"4": "Astronomy",
+			"5": "Writing"
+        }
+    }
+}
