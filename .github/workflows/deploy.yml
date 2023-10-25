@@ -31,8 +31,9 @@ jobs:
        cd ..
        cd ..
        cd ..
-       mkdir -p ./lab/svelte/steven-lollivier/build/lab/dos-like && cp -r ./lab/dos-like/ "$_"
-       mkdir -p ./lab/svelte/steven-lollivier/build/lab/stories && cp -r ./lab/stories/ "$_"
+       mkdir -p ./lab/svelte/steven-lollivier/build/lab
+       cp -r ./lab/dos-like/ ./lab/svelte/steven-lollivier/build/lab/dos-like
+       cp -r ./lab/stories/ ./lab/svelte/steven-lollivier/build/lab/stories
     
     - name: 📂 Sync files
       uses: SamKirkland/FTP-Deploy-Action@4.3.0
