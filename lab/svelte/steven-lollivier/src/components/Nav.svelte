@@ -23,7 +23,7 @@
 </style>
 
 <div>
-<nav id="navigation" class="navbar navbar-fixed-top center-menu sticky" role="navigation"
+<nav id="navigation" class="navbar navbar-fixed-top center-menu sticky"
         class:isStuck
         data-position='top'
         use:sticky={{stickToTop: true}}
