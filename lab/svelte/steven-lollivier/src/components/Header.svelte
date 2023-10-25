@@ -1,3 +1,7 @@
+<script>
+	import { Age } from ".";
+</script>
+
 <header id="home" class="hero bg-slideshow-yes">
     <div class="hero-body">
         <div class="hero-text text-center">
@@ -8,7 +12,7 @@
         <h1 class="small">Software Engineer</h1>
 
         <p>
-            <span class="js-age"></span> years young, a code lover and quite a coffee addict.
+            <Age /> years young, a code lover and quite a coffee addict.
         </p>
 
         <div class="page-scroll">

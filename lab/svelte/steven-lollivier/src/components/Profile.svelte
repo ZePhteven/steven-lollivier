@@ -1,5 +1,5 @@
-<script lang="ts">
-    const age:number = new Date(new Date() - new Date(1989, 11, 5)).getFullYear() - 1970;
+<script>
+	import Age from "./Age.svelte";
 </script>
 
 <section id="profile" class="section">
@@ -14,7 +14,7 @@
                   <h2 class="section-title">Hello, my name is Steven.</h2>
 
                   <p>
-                    Steven LOLLIVIER, {age} years young, born and grew up in Rennes, Britany. Highly motivated .NET developer, that loves to learn new things.
+                    Steven LOLLIVIER, <Age /> years young, born and grew up in Rennes, Britany. Highly motivated .NET developer, that loves to learn new things.
                   </p>
 
                   <span class="divider"></span>

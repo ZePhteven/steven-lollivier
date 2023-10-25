@@ -1,3 +1,4 @@
+export { default as Age } from './Age.svelte'
 export { default as BarChart } from './BarChart.svelte'
 export { default as CircleChart } from './CircleChart.svelte'
 export { default as Contact } from './Contact.svelte'
