@@ -1,5 +1,11 @@
 name: deploy
 
+on:
+  push:
+    branches: [ "master" ]
+  workflow_dispatch:
+    description: 'Running workflow manually...'
+
 jobs:
   web-deploy:
     name: 🎉 Deploy
