@@ -3,27 +3,30 @@ name: deploy
 on:
   push:
     branches: [ "master" ]
+  workflow_dispatch:
+    description: 'Running workflow manually...'
 
 jobs:
   web-deploy:
     name: 🎉 Deploy
     runs-on: ubuntu-latest
-#    strategy:
-#      matrix:
-#        node-versions: [ '18' ]
+    strategy:
+      matrix:
+        node-versions: [ '18' ]
     steps:
     - name: 🚚 Get latest code
       uses: actions/checkout@v3
 
-#    - name: Use Node.js ${{ matrix.node-versions }}
-#      uses: actions/setup-node@v3
-#      with:
-#        node-version: ${{ matrix.node-versions }}
+    - name: Use Node.js ${{ matrix.node-versions }}
+      uses: actions/setup-node@v3
+      with:
+        node-version: ${{ matrix.node-versions }}
 
-#    - name: Build
-#      run: |
-#        npm ci
-#        npm run prod
+    - name: Build
+      run: |
+       cd ./lab/svelte/steven-lollivier
+       npm ci
+       npm run build
     
     - name: 📂 Sync files
       uses: SamKirkland/FTP-Deploy-Action@4.3.0
@@ -32,3 +35,4 @@ jobs:
         username: ${{ secrets.FTP_USER }}
         password: ${{ secrets.FTP_PASS }}
         server-dir: ./www/1/
+        local-dir: ./build
