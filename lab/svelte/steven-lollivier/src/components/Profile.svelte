@@ -53,7 +53,7 @@
           <!-- PROFILE PICTURE START -->
           <div class="col-md-5 hidden-xs hidden-sm match-height pp-wrapper">
             <div class="profile-picture style-one">
-              <img src="images/profile-picture.jpeg" alt="profile picture" class="img-responsive" />
+              <img src="images/profile-picture.jpeg" alt="profile" class="img-responsive" />
             </div>
           </div>
           <!-- //PROFILE PICTURE END -->
