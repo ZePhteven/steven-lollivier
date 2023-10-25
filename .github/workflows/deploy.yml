@@ -28,8 +28,8 @@ jobs:
        npm ci
        npm run build
        cd .
-       cp lab/dos-like/ lab/svelte/steven-lollivier/build/lab/dos-like/
-       cp lab/stories/ lab/svelte/steven-lollivier/build/lab/stories/
+       cp /lab/dos-like/ /lab/svelte/steven-lollivier/build/lab/dos-like/
+       cp /lab/stories/ /lab/svelte/steven-lollivier/build/lab/stories/
     
     - name: 📂 Sync files
       uses: SamKirkland/FTP-Deploy-Action@4.3.0
