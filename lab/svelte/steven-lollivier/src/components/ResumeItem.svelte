@@ -1,8 +1,8 @@
 <script lang="ts">
 
-    export let title:string;
-    export let description:string;
-    export let year:string;
+    export let title: string;
+    export let year: string;
+    export let description: string = '';
     
     const id = (Math.random() + 1).toString(36).substring(7);
     
@@ -14,7 +14,7 @@
     </div>
 
     <div class="resume-btn">
-      <a href="#education-{id}" class="collapsed" data-toggle="collapse" data-parent="#education">&nbsp;</a>
+      <a href="#education-{id}" class="collapsed" data-toggle="collapse" data-parent="#education" on:click={(e) => e.preventDefault()}>&nbsp;</a>
     </div>
 
     <div class="panel">
