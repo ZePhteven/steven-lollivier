@@ -14,7 +14,7 @@
                   <h2 class="section-title">Hello, my name is Steven.</h2>
 
                   <p>
-                    Steven LOLLIVIER, <Age /> years young, born and grew up in Rennes, Britany. Highly motivated .NET developer, that loves to learn new things.
+                    Steven LOLLIVIER, <Age /> years young, born and grew up in Rennes, Britany. Highly motivated Software Engineer, that loves learning new things (this website, for example has been (re)made w/ SvelteKit !)
                   </p>
 
                   <span class="divider"></span>
