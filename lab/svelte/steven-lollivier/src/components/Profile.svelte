@@ -41,7 +41,7 @@
                 </div>
 
                 <div class="col-sm-6 col-md-7">
-                  <a href="/upload/cv.pdf" class="btn btn-lg btn-custom" download target="_blank">
+                  <a href="/upload/cv.pdf" class="btn btn-lg btn-custom" download target="_blank" rel="external">
                     <i class="icon-File-Download"></i> Download Resume
                   </a>
                 </div>
