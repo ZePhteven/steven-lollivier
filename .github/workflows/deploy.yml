@@ -35,4 +35,4 @@ jobs:
         username: ${{ secrets.FTP_USER }}
         password: ${{ secrets.FTP_PASS }}
         server-dir: ./www/1/
-        local-dir: ./build
+        local-dir: ./build/
