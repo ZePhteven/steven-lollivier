@@ -17,15 +17,16 @@ jobs:
     - name: 🚚 Get latest code
       uses: actions/checkout@v3
 
-#    - name: Use Node.js ${{ matrix.node-versions }}
-#      uses: actions/setup-node@v3
-#      with:
-#        node-version: ${{ matrix.node-versions }}
+   - name: Use Node.js ${{ matrix.node-versions }}
+     uses: actions/setup-node@v3
+     with:
+       node-version: ${{ matrix.node-versions }}
 
-#    - name: Build
-#      run: |
-#        npm ci
-#        npm run prod
+   - name: Build
+     run: |
+       cd ./lab/svelte/steven-lollivier
+       npm ci
+       npm run prod
     
     - name: 📂 Sync files
       uses: SamKirkland/FTP-Deploy-Action@4.3.0
