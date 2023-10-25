@@ -27,7 +27,7 @@
                   I thought it might be funny to try a DOS-like resume, so I did it!
                 </p>
                 <p class="text-grey">
-                  <a href="/lab/dos-like" target="_blank">Try it!</a>
+                  <a href="/lab/dos-like" target="_blank" rel="external">Try it!</a>
                 </p>
               </div>
             </div>
@@ -42,7 +42,7 @@
                   I am always kind of lost in my minds, so I decided to share few of them in these writings! (Warning : It's only in french!)
                 </p>
                 <p class="text-grey">
-                  <a href="/lab/stories" target="_blank">Check it out!</a>
+                  <a href="/lab/stories" target="_blank" rel="external">Check it out!</a>
                 </p>
               </div>
             </div>
