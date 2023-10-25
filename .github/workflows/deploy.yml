@@ -27,11 +27,12 @@ jobs:
        cd ./lab/svelte/steven-lollivier
        npm ci
        npm run build
+
        cd ..
        cd ..
        cd ..
-       mkdir -p ./lab/svelte/steven-lollivier/build/lab/dos-like/ && cp -r ./lab/dos-like/ "$_"
-       mkdir -p ./lab/svelte/steven-lollivier/build/lab/stories/ && cp -r ./lab/stories/ "$_"
+       mkdir -p ./lab/svelte/steven-lollivier/build/lab/dos-like && cp -r ./lab/dos-like/ "$_"
+       mkdir -p ./lab/svelte/steven-lollivier/build/lab/stories && cp -r ./lab/stories/ "$_"
     
     - name: 📂 Sync files
       uses: SamKirkland/FTP-Deploy-Action@4.3.0
