@@ -27,7 +27,7 @@ jobs:
        cd ./lab/svelte/steven-lollivier
        npm ci
        npm run build
-       cd .
+       cd ~
        cp /lab/dos-like/ /lab/svelte/steven-lollivier/build/lab/dos-like/
        cp /lab/stories/ /lab/svelte/steven-lollivier/build/lab/stories/
     
