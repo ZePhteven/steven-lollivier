@@ -1,8 +1,7 @@
 <script>
-
 	import { ResumeItem } from ".";
-
 </script>
+
 <section id="resume" class="section">
     <div class="container section-wrapper">
       <div class="section-content">
@@ -26,17 +25,17 @@
             </h3>
 
             <div class="panel-group resume" id="work">
-              <ResumeItem class="ResumeItem" year="2023 - Now" title="Tech Lead - PocPharma" />
+              <ResumeItem year="2023 - Now" title="Tech Lead - PocPharma" />
 
-              <ResumeItem class="ResumeItem" year="2019 - 2023" title="Software engineer - HelloWork" />
+              <ResumeItem year="2019 - 2023" title="Software engineer - HelloWork" />
 
-              <ResumeItem class="ResumeItem" year="2013 - 2019" title="IT Developer - 6TM" />
+              <ResumeItem year="2013 - 2019" title="IT Developer - 6TM" />
               
-              <ResumeItem class="ResumeItem" year="2010 - 2012" title="Analyst Programmer (Web) - CYIM" />
+              <ResumeItem year="2010 - 2012" title="Analyst Programmer (Web) - CYIM" />
 
-              <ResumeItem class="ResumeItem" year="2009" title="Analyst Programmer (internal) - DRTEFP" />
+              <ResumeItem year="2009" title="Analyst Programmer (internal) - DRTEFP" />
 
-              <ResumeItem class="ResumeItem" year="2009" title=".NET developer (Internship) - DGA (Ex CELAR)" />
+              <ResumeItem year="2009" title=".NET developer (Internship) - DGA (Ex CELAR)" />
             </div>
           </div>
         </div>
@@ -50,11 +49,11 @@
             </h3>
             
             <div class="panel-group resume" id="education">
-              <ResumeItem class="ResumeItem" year="2010 - 2012" title="IT Developer - ENI" description="Bachelor's degree" />
+              <ResumeItem year="2010 - 2012" title="IT Developer - ENI" description="Bachelor's degree" />
               
-              <ResumeItem class="ResumeItem" year="2007 - 2009" title="DUT GEII - IUT GEII RENNES 1" />
+              <ResumeItem year="2007 - 2009" title="DUT GEII - IUT GEII RENNES 1" />
               
-              <ResumeItem class="ResumeItem" year="2006 - 2007" title="Bac STI Electronic - Marcel Callo High School" />
+              <ResumeItem year="2006 - 2007" title="Bac STI Electronic - Marcel Callo High School" />
             </div>
           </div>
         </div>
