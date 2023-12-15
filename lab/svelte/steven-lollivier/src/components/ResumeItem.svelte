@@ -10,7 +10,7 @@
 	const id = (Math.random() + 1).toString(36).substring(7);
 
 	const displayYear = !!start
-		? `${start[0]} - ${!!end ? (end[0] === start[0] ? '' : end[0]) : 'NOW'}`
+		? `${start[0]} ${!!end ? (end[0] === start[0] ? '' : '- ' + end[0]) : '- NOW'}`
 		: year;
 
 	const duration = !!start
@@ -18,8 +18,6 @@
 			? getYearDiff(new Date(start[0], start[1]), new Date(end[0], end[1]))
 			: getYearDiff(new Date(start[0], start[1]), new Date())
 		: '';
-
-	console.log('duration', duration);
 </script>
 
 <div class="resume-item">
