@@ -120,7 +120,6 @@ var MatriXv = {
     },
     /* cv */picture: function () {
         $.get('data/users/pictures/' + user.id + '.data', function (data) {
-            console.log('data/users/pictures - success');
             showContent(data, false, true);
             // showContent(data);
         }).fail(function () {
