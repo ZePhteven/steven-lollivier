@@ -2,9 +2,9 @@ name: deploy
 
 on:
   push:
-    branches: [ "master" ]
+    branches: ["master"]
   workflow_dispatch:
-    description: 'Running workflow manually...'
+    description: "Running workflow manually..."
 
 jobs:
   web-deploy:
@@ -12,34 +12,34 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        node-versions: [ '18' ]
+        node-versions: ["18"]
     steps:
-    - name: 🚚 Get latest code
-      uses: actions/checkout@v3
+      - name: 🚚 Get latest code
+        uses: actions/checkout@v3
 
-    - name: Use Node.js ${{ matrix.node-versions }}
-      uses: actions/setup-node@v3
-      with:
-        node-version: ${{ matrix.node-versions }}
+      - name: Use Node.js ${{ matrix.node-versions }}
+        uses: actions/setup-node@v3
+        with:
+          node-version: ${{ matrix.node-versions }}
 
-    - name: Build
-      run: |
-       cd ./lab/svelte/steven-lollivier
-       npm ci
-       npm run build
+      - name: Build
+        run: |
+          cd ./lab/svelte/steven-lollivier
+          npm ci
+          npm run build
 
-       cd ..
-       cd ..
-       cd ..
-       mkdir -p ./lab/svelte/steven-lollivier/build/lab
-       cp -r ./lab/dos-like/ ./lab/svelte/steven-lollivier/build/lab/dos-like
-       cp -r ./lab/stories/ ./lab/svelte/steven-lollivier/build/lab/stories
-    
-    - name: 📂 Sync files
-      uses: SamKirkland/FTP-Deploy-Action@4.3.0
-      with:
-        server: ${{ secrets.FTP_HOST }}
-        username: ${{ secrets.FTP_USER }}
-        password: ${{ secrets.FTP_PASS }}
-        server-dir: ./www/1/
-        local-dir: ./lab/svelte/steven-lollivier/build/
+          cd ..
+          cd ..
+          cd ..
+          mkdir -p ./lab/svelte/steven-lollivier/build/lab
+          cp -r ./lab/dos-like/ ./lab/svelte/steven-lollivier/build/lab/dos-like
+          cp -r ./lab/stories/ ./lab/svelte/steven-lollivier/build/lab/stories
+
+      - name: 📂 Sync files
+        uses: SamKirkland/FTP-Deploy-Action@4.3.0
+        with:
+          server: ${{ secrets.FTP_HOST }}
+          username: ${{ secrets.FTP_USER }}
+          password: ${{ secrets.FTP_PASS }}
+          server-dir: ./www/1/
+          local-dir: ./lab/svelte/steven-lollivier/build/
