@@ -4,89 +4,86 @@
  * @param params.callback - function to execute when the node becomes stuck or unstuck
  */
 export default function sticky(node, { stickToTop }) {
-    const intersectionCallback = function (entries) {
-        // only observing one item at a time
-        const entry = entries[0];
-        
-        let isStuck = false;
-        if (!entry.isIntersecting && isValidYPosition(entry)) {
-            isStuck = true;
-        }
+	const intersectionCallback = function (entries) {
+		// only observing one item at a time
+		const entry = entries[0];
 
-        node.dispatchEvent(new CustomEvent('stuck', {
-            detail: { isStuck }
-        }));
-    };
+		let isStuck = false;
+		if (!entry.isIntersecting && isValidYPosition(entry)) {
+			isStuck = true;
+		}
 
-    const isValidYPosition = function ({ target, boundingClientRect }) {
-        console.log('boundingClientRect.y', boundingClientRect.y);
-    
-        if (target === stickySentinelTop) {
-            return boundingClientRect.y < 0;
-        } else {
-            return boundingClientRect.y > 0;
-        }
-    };
+		node.dispatchEvent(
+			new CustomEvent('stuck', {
+				detail: { isStuck }
+			})
+		);
+	};
 
-    const mutationCallback = function (mutations) {
-        // If something changes and the sentinel nodes are no longer first and last child, put them back in position
-        mutations.forEach(function (mutation) {
-            const { parentNode: topParent } = stickySentinelTop;
-            const { parentNode: bottomParent } = stickySentinelBottom;
+	const isValidYPosition = function ({ target, boundingClientRect }) {
+		if (target === stickySentinelTop) {
+			return boundingClientRect.y < 0;
+		} else {
+			return boundingClientRect.y > 0;
+		}
+	};
 
-            if (stickySentinelTop !== topParent.firstChild) {
-                topParent.prepend(stickySentinelTop);
-            }
-            
-            if (stickySentinelBottom !== bottomParent.lastChild) {
-                bottomParent.append(stickySentinelBottom);
-            }
-        });
-    };
+	const mutationCallback = function (mutations) {
+		// If something changes and the sentinel nodes are no longer first and last child, put them back in position
+		mutations.forEach(function (mutation) {
+			const { parentNode: topParent } = stickySentinelTop;
+			const { parentNode: bottomParent } = stickySentinelBottom;
 
-    const intersectionObserver = new IntersectionObserver(
-        intersectionCallback,
-        {}
-    );
-    const mutationObserver = new MutationObserver(mutationCallback);
+			if (stickySentinelTop !== topParent.firstChild) {
+				topParent.prepend(stickySentinelTop);
+			}
 
-    // we insert and observe a sentinel node immediately after the target
-    // when it is visible, the target node cannot be sticking
-    const sentinelStyle = 'position: absolute; height: 1px;';
-    const stickySentinelTop = document.createElement('div');
-    stickySentinelTop.classList.add('stickySentinelTop');
-	  // without setting a height, Safari breaks
-	  stickySentinelTop.style = sentinelStyle;
-    node.parentNode.prepend(stickySentinelTop);
+			if (stickySentinelBottom !== bottomParent.lastChild) {
+				bottomParent.append(stickySentinelBottom);
+			}
+		});
+	};
 
-    const stickySentinelBottom = document.createElement('div');
-    stickySentinelBottom.classList.add('stickySentinelBottom');
-	  stickySentinelBottom.style = sentinelStyle;
-    node.parentNode.append(stickySentinelBottom);
+	const intersectionObserver = new IntersectionObserver(intersectionCallback, {});
+	const mutationObserver = new MutationObserver(mutationCallback);
 
-    if (stickToTop) {
-        intersectionObserver.observe(stickySentinelTop);
-    } else {
-        intersectionObserver.observe(stickySentinelBottom);
-    }
+	// we insert and observe a sentinel node immediately after the target
+	// when it is visible, the target node cannot be sticking
+	const sentinelStyle = 'position: absolute; height: 1px;';
+	const stickySentinelTop = document.createElement('div');
+	stickySentinelTop.classList.add('stickySentinelTop');
+	// without setting a height, Safari breaks
+	stickySentinelTop.style = sentinelStyle;
+	node.parentNode.prepend(stickySentinelTop);
 
-    mutationObserver.observe(node.parentNode, { childList: true });
+	const stickySentinelBottom = document.createElement('div');
+	stickySentinelBottom.classList.add('stickySentinelBottom');
+	stickySentinelBottom.style = sentinelStyle;
+	node.parentNode.append(stickySentinelBottom);
 
-    return {
-        update({ stickToTop }) {
-            // change which sentinel we are observing
-            if (stickToTop) {
-                intersectionObserver.unobserve(stickySentinelBottom);
-                intersectionObserver.observe(stickySentinelTop);
-            } else {
-                intersectionObserver.unobserve(stickySentinelTop);
-                intersectionObserver.observe(stickySentinelBottom);
-            }
-        },
+	if (stickToTop) {
+		intersectionObserver.observe(stickySentinelTop);
+	} else {
+		intersectionObserver.observe(stickySentinelBottom);
+	}
 
-        destroy() {
-            intersectionObserver.disconnect();
-            mutationObserver.disconnect();
-        }
-    };
+	mutationObserver.observe(node.parentNode, { childList: true });
+
+	return {
+		update({ stickToTop }) {
+			// change which sentinel we are observing
+			if (stickToTop) {
+				intersectionObserver.unobserve(stickySentinelBottom);
+				intersectionObserver.observe(stickySentinelTop);
+			} else {
+				intersectionObserver.unobserve(stickySentinelTop);
+				intersectionObserver.observe(stickySentinelBottom);
+			}
+		},
+
+		destroy() {
+			intersectionObserver.disconnect();
+			mutationObserver.disconnect();
+		}
+	};
 }
