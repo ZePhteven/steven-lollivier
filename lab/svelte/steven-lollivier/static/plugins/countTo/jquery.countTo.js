@@ -4,13 +4,18 @@
 
 		return $(this).each(function () {
 			// set options for current element
-			var settings = $.extend({}, $.fn.countTo.defaults, {
-				from:            $(this).data('from'),
-				to:              $(this).data('to'),
-				speed:           $(this).data('speed'),
-				refreshInterval: $(this).data('refresh-interval'),
-				decimals:        $(this).data('decimals')
-			}, options);
+			var settings = $.extend(
+				{},
+				$.fn.countTo.defaults,
+				{
+					from: $(this).data('from'),
+					to: $(this).data('to'),
+					speed: $(this).data('speed'),
+					refreshInterval: $(this).data('refresh-interval'),
+					decimals: $(this).data('decimals')
+				},
+				options
+			);
 
 			// how many times to update the value, and how much to increment the value on each update
 			var loops = Math.ceil(settings.speed / settings.refreshInterval),
@@ -40,7 +45,7 @@
 
 				render(value);
 
-				if (typeof(settings.onUpdate) == 'function') {
+				if (typeof settings.onUpdate == 'function') {
 					settings.onUpdate.call(self, value);
 				}
 
@@ -50,7 +55,7 @@
 					clearInterval(data.interval);
 					value = settings.to;
 
-					if (typeof(settings.onComplete) == 'function') {
+					if (typeof settings.onComplete == 'function') {
 						settings.onComplete.call(self, value);
 					}
 				}
@@ -64,17 +69,17 @@
 	};
 
 	$.fn.countTo.defaults = {
-		from: 0,               // the number the element should start at
-		to: 0,                 // the number the element should end at
-		speed: 1000,           // how long it should take to count between the target numbers
-		refreshInterval: 100,  // how often the element should be updated
-		decimals: 0,           // the number of decimal places to show
-		formatter: formatter,  // handler for formatting the value before rendering
-		onUpdate: null,        // callback method for every time the element is updated
-		onComplete: null       // callback method for when the element finishes updating
+		from: 0, // the number the element should start at
+		to: 0, // the number the element should end at
+		speed: 1000, // how long it should take to count between the target numbers
+		refreshInterval: 100, // how often the element should be updated
+		decimals: 0, // the number of decimal places to show
+		formatter: formatter, // handler for formatting the value before rendering
+		onUpdate: null, // callback method for every time the element is updated
+		onComplete: null // callback method for when the element finishes updating
 	};
 
 	function formatter(value, settings) {
 		return value.toFixed(settings.decimals);
 	}
-}(jQuery));
+})(jQuery);
