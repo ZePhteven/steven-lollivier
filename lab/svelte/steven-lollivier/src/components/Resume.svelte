@@ -26,13 +26,17 @@
 					</h3>
 
 					<div class="panel-group resume" id="work">
-						<ResumeItem year="2023 - Now" title="Tech Lead - PocPharma" />
+						<ResumeItem start={[2023, 0]} title="Tech Lead - PocPharma" />
 
-						<ResumeItem year="2019 - 2023" title="Software engineer - HelloWork" />
+						<ResumeItem start={[2019, 8]} end={[2023, 0]} title="Software engineer - HelloWork" />
 
-						<ResumeItem year="2013 - 2019" title="IT Developer - 6TM" />
+						<ResumeItem start={[2013, 2]} end={[2019, 8]} title="IT Developer - 6TM" />
 
-						<ResumeItem year="2010 - 2012" title="Analyst Programmer (Web) - CYIM" />
+						<ResumeItem
+							start={[2010, 11]}
+							end={[2012, 11]}
+							title="Analyst Programmer (Web) - CYIM"
+						/>
 
 						<ResumeItem year="2009" title="Analyst Programmer (internal) - DRTEFP" />
 
