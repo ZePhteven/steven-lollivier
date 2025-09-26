@@ -71,10 +71,38 @@
 			},
 			"4": {
 				"startdate": "09/2019",
+				"enddate": "01/2023",
+				"type" : "2",
+				"title" : "Software engineer",
+				"company": "HelloWork"
+			},
+			"5": {
+				"startdate": "01/2023",
+				"enddate": "12/2023",
+				"type" : "2",
+				"title" : "Tech Lead",
+				"company": "PocPharma"
+			},
+			"6": {
+				"startdate": "01/2024",
+				"enddate": "07/2024",
+				"type" : "2",
+				"title" : "Senior Software Engineer",
+				"company": "ilek"
+			},
+			"7": {
+				"startdate": "03/2024",
 				"enddate": "/",
 				"type" : "2",
-				"title" : "Ingénieur informatique",
-				"company": "6TM"
+				"title" : "CTO",
+				"company": "Weekenjoy"
+			},
+			"8": {
+				"startdate": "09/2024",
+				"enddate": "/",
+				"type" : "2",
+				"title" : "Senior Software Engineer",
+				"company": "Briqly"
 			}
         },
 		"languages": {

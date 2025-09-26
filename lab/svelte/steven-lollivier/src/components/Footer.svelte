@@ -11,6 +11,7 @@
 				</div>
 
 				<ul class="list-inline social-icons">
+					<!--
 					<li>
 						<SocialIcon url="https://www.facebook.com/steven.lollivier" icon="fa-facebook" />
 					</li>
@@ -18,6 +19,7 @@
 					<li>
 						<SocialIcon url="https://twitter.com/stevenlollivier" icon="fa-twitter" />
 					</li>
+					-->
 
 					<li>
 						<SocialIcon url="https://www.linkedin.com/in/stevenlollivier" icon="fa-linkedin" />
@@ -33,7 +35,7 @@
 		<div class="row">
 			<div class="col-md-12">
 				<div class="copyright text-center">
-					<p class="text-grey">&copy; 2023 Steven LOLLIVIER. All rights reserved.</p>
+					<p class="text-grey">&copy; 2025 Steven LOLLIVIER. All rights reserved.</p>
 				</div>
 			</div>
 		</div>

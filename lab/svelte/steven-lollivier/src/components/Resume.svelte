@@ -26,7 +26,13 @@
 					</h3>
 
 					<div class="panel-group resume" id="work">
-						<ResumeItem start={[2023, 0]} title="Tech Lead - PocPharma" />
+						<ResumeItem start={[2024, 9]} title="Senior Software Engineer - Briqly" />
+						
+						<ResumeItem start={[2024, 3]} title="CTO - Weekenjoy" />
+
+						<ResumeItem start={[2024, 1]} end={[2024, 7]} title="Senior Software Engineer - ilek" />
+
+						<ResumeItem start={[2023, 0]} end={[2023, 11]} title="Tech Lead - PocPharma" />
 
 						<ResumeItem start={[2019, 8]} end={[2023, 0]} title="Software engineer - HelloWork" />
 

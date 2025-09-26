@@ -45,7 +45,7 @@
 								</ul>
 							</div>
 
-							<div class="col-sm-6 col-md-7">
+							<!-- <div class="col-sm-6 col-md-7">
 								<a
 									href="/upload/cv.pdf"
 									class="btn btn-lg btn-custom"
@@ -55,7 +55,7 @@
 								>
 									<i class="icon-File-Download" /> Download Resume
 								</a>
-							</div>
+							</div> -->
 						</div>
 					</div>
 					<!-- //CONTACT DETAILS END -->
